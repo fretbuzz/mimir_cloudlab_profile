@@ -1,6 +1,8 @@
 echo 'this is a test!'
 echo $1
 
+echo "see, it kinda worked" >> /local/repository/deploy_test_prior.txt
+
 if [ "$1" = "wordpress" ]; then
   echo "it was testtest"
   echo "see, it was wordpress" >> /local/repository/deploy_test.txt
