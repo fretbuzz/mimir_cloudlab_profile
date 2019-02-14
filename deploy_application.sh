@@ -3,6 +3,8 @@ echo $1
 
 echo "see, it kinda worked" >> /local/repository/deploy_test_prior.txt
 echo "$1" >> /local/repository/deploy_test_prior_val.txt
+echo "$0" >> /local/repository/deploy_test_prior_val_two.txt
+echo "$2" >> /local/repository/deploy_test_prior_val_three.txt
 
 if [ "$1" = "wordpress" ]; then
   echo "it was testtest"
