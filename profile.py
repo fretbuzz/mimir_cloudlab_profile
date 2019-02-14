@@ -33,6 +33,16 @@ pc.defineParameter("osImage", "Select OS image",
 #pc.defineParameter( "Application To Start", "Select App", portal.ParameterType.STRING, applicationList[0],
 #                  applicationList, longDescription="Which app to auto start?")
 portal.context.defineParameter( "n", "Number of VMs", portal.ParameterType.INTEGER, 1 )
+imageList = [
+    ('urn:publicid:IDN+wisc.cloudlab.us+image+dna-PG0:minikube_starter:2', 'UBUNTU 16.04'),]
+    
+# Define a single parameter for the instantiation page.
+pc.defineParameter("osImageTwo", "Select OS image",
+                   portal.ParameterType.IMAGE,
+                   imageList[0], imageList,
+                   longDescription="Most clusters have this set of images, " +
+                   "pick your favorite one.")
+
 
 # Retrieve the values the user specifies during instantiation.
 params = pc.bindParameters()
