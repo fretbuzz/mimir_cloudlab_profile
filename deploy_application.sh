@@ -12,4 +12,6 @@ elif [ "$1" = "gitlab" ]; then
  # deploy_gitlab.py
 elif [ "$1" = "sockshop" ]; then
   echo "hello shockshop"
+elif [ "$1" = "drupal" ]; then
+  echo "hello drupal"
 fi
