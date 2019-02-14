@@ -39,8 +39,8 @@ bs = node.Blockstore("bs", "/mydata")
 bs.size = "80GB"
 bs.placement = "nonsysvol"
 
+node.addService(pg.Execute(shell="bash", command="/local/repository/kubernetes_setup.sh"))
+node.addService(pg.Execute(shell="bash", command="/local/repository/test_profile_script_running.sh"))
+
 # Print the RSpec to the enclosing page.
 pc.printRequestRSpec(request)
-
-node.addService(pg.Execute(shell="sh", command="/local/repository/kubernetes_setup.sh"))
-node.addService(pg.Execute(shell="sh", command="/local/repository/test_profile_script_running.sh"))
