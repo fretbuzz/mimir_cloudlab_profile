@@ -56,8 +56,10 @@ bs.size = "80GB"
 bs.placement = "nonsysvol"
 
 node.addService(pg.Execute(shell="/bin/sh", command="touch /local/repository/test_test.xt"))
-#node.addService(pg.Execute(shell="/bin/sh", command="bash /local/repository/kubernetes_setup.sh"))
+#node.addService(pg.Execute(shell="/bin/sh", command="/local/repository/kubernetes_setup.sh"))
 node.addService(pg.Execute(shell="bash", command="bash /local/repository/test_profile_script_running.sh"))
+node.addService(pg.Execute(shell="bash", command="chmod +x /local/repository/test_profile_script_running.sh"))
+node.addService(pg.Execute(shell="bash", command="/local/repository/test_profile_script_running.sh"))
 
 # Print the RSpec to the enclosing page.
 pc.printRequestRSpec(request)
