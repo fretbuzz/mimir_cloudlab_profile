@@ -2,6 +2,7 @@ echo 'this is a test!'
 echo $1
 
 echo "see, it kinda worked" >> /local/repository/deploy_test_prior.txt
+echo "$1" >> /local/repository/deploy_test_prior_val.txt
 
 if [ "$1" = "wordpress" ]; then
   echo "it was testtest"
