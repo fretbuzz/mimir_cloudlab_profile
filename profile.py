@@ -37,8 +37,8 @@ imageList = [
     ('urn:publicid:IDN+wisc.cloudlab.us+image+dna-PG0:minikube_starter:2', 'UBUNTU 16.04'),]
     
 # Define a single parameter for the instantiation page.
-pc.defineParameter("osImageTwo", "Select OS image",
-                   portal.ParameterType.IMAGE,
+pc.defineParameter("Application To Start", "SSelect App",
+                   portal.ParameterType.STRING,
                    imageList[0], imageList,
                    longDescription="Most clusters have this set of images, " +
                    "pick your favorite one.")
