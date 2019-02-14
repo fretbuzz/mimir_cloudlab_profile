@@ -16,7 +16,7 @@ def main():
 	#out = subprocess.check_output(["/helm", "install", "--name", "wordpress", "stable/wordpress"])
 	#print out
 	try:
-		out = subprocess.check_output(["helm", "install", "--name", "my-release", "--set", "mysqlRootPassword=secretpassword,mysqlUser=my-user,mysqlPassword=my-password,mysqlDatabase=my-database,replicas=15", "stable/percona-xtradb-cluster"])
+		out = subprocess.check_output(["helm", "install", "--name", "my-release", "--set", "mysqlRootPassword=secretpassword,mysqlUser=my-user,mysqlPassword=my-password,mysqlDatabase=my-database,replicas=7", "stable/percona-xtradb-cluster"])
 		print out
 	except:
 		print "DB cluster must have already been initiated..."
@@ -32,7 +32,7 @@ def main():
 		print "wordpress deployment must already exist"
 
 	num_wp_containers = 1
-	goal_wp_containers = 1
+	goal_wp_containers = 22
 	while num_wp_containers < goal_wp_containers:
 		out = subprocess.check_output(["kubectl", "scale", "deploy", "wwwppp-wordpress", "--replicas=" + str(num_wp_containers)])
 		num_wp_containers += 5
