@@ -27,19 +27,19 @@ pc.defineParameter("osImage", "Select OS image",
                    longDescription="Most clusters have this set of images, " +
                    "pick your favorite one.")
 
-#applicationList = [
-#    ('none', 'none'), ('wp', 'wordpress'), ('ss','sockshop'), ('dr','drupal'), ('es','eShop'),]
+applicationList = [
+    ('none', 'none'), ('wp', 'wordpress'), ('ss','sockshop'), ('dr','drupal'), ('es','eShop'),]
 
 #pc.defineParameter( "Application To Start", "Select App", portal.ParameterType.STRING, applicationList[0],
 #                  applicationList, longDescription="Which app to auto start?")
 portal.context.defineParameter( "n", "Number of VMs", portal.ParameterType.INTEGER, 1 )
-imageList = [
-    ('urn:publicid:IDN+wisc.cloudlab.us+image+dna-PG0:minikube_starter:2', 'UBUNTU 16.04'),]
+#imageList = [
+#    ('urn:publicid:IDN+wisc.cloudlab.us+image+dna-PG0:minikube_starter:2', 'UBUNTU 16.04'),]
     
 # Define a single parameter for the instantiation page.
 pc.defineParameter("App", "Select App image",
                    portal.ParameterType.IMAGE,
-                   imageList[0], imageList,
+                   applicationList[0], applicationList,
                    longDescription="Most clusters have this set of images, " +
                    "pick your favorite one.")
 
