@@ -27,11 +27,12 @@ pc.defineParameter("osImage", "Select OS image",
                    longDescription="Most clusters have this set of images, " +
                    "pick your favorite one.")
 
-applicationList = [
-    ('none', 'none'), ('wp', 'wordpress'), ('ss','sockshop'), ('dr','drupal'), ('es','eShop'),]
+#applicationList = [
+#    ('none', 'none'), ('wp', 'wordpress'), ('ss','sockshop'), ('dr','drupal'), ('es','eShop'),]
 
-pc.defineParameter( "Application To Start", "Select App", portal.ParameterType.STRING, applicationList[0],
-                  applicationList, longDescription="Which app to auto start?")
+#pc.defineParameter( "Application To Start", "Select App", portal.ParameterType.STRING, applicationList[0],
+#                  applicationList, longDescription="Which app to auto start?")
+portal.context.defineParameter( "n", "Number of VMs", portal.ParameterType.INTEGER, 1 )
 
 # Retrieve the values the user specifies during instantiation.
 params = pc.bindParameters()
