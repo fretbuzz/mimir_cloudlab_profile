@@ -32,7 +32,7 @@ applicationList = [
 
 #pc.defineParameter( "Application To Start", "Select App", portal.ParameterType.STRING, applicationList[0],
 #                  applicationList, longDescription="Which app to auto start?")
-portal.context.defineParameter( "n", "Number of VMs", portal.ParameterType.INTEGER, 1 )
+#portal.context.defineParameter( "n", "Number of VMs", portal.ParameterType.INTEGER, 1 )
 #imageList = [
 #    ('urn:publicid:IDN+wisc.cloudlab.us+image+dna-PG0:minikube_starter:2', 'UBUNTU 16.04'),]
     
@@ -55,10 +55,9 @@ bs = node.Blockstore("bs", "/mydata")
 bs.size = "80GB"
 bs.placement = "nonsysvol"
 
-node.addService(pg.Execute(shell="/bin/sh", command="chmod +x /local/repository/test_profile_script_running.sh"))
 node.addService(pg.Execute(shell="/bin/sh", command="touch /local/repository/test_test.xt"))
-node.addService(pg.Execute(shell="/bin/sh", command="/local/repository/kubernetes_setup.sh"))
-node.addService(pg.Execute(shell="bash", command="/local/repository/test_profile_script_running.sh"))
+#node.addService(pg.Execute(shell="/bin/sh", command="bash /local/repository/kubernetes_setup.sh"))
+node.addService(pg.Execute(shell="bash", command="bash /local/repository/test_profile_script_running.sh"))
 
 # Print the RSpec to the enclosing page.
 pc.printRequestRSpec(request)
