@@ -28,9 +28,9 @@ pc.defineParameter("osImage", "Select OS image",
                    "pick your favorite one.")
 
 applicationList = [
-    ('wp', 'wordpress'), ('ss','sockshop'), ('dr','drupal'), ('es','eShop'),]
+    ('none', 'none'), ('wp', 'wordpress'), ('ss','sockshop'), ('dr','drupal'), ('es','eShop'),]
 
-pc.defineParameter( "Application To Start", "Select App", portal.ParameterType.STRING, 'none',
+pc.defineParameter( "Application To Start", "Select App", portal.ParameterType.STRING, applicationList[0],
                   applicationList, longDescription="Which app to auto start?")
 
 # Retrieve the values the user specifies during instantiation.
