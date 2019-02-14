@@ -28,7 +28,7 @@ pc.defineParameter("osImage", "Select OS image",
                    "pick your favorite one.")
 
 applicationList = [
-    ('none', 'none'), ('wp', 'wordpress'), ('ss','sockshop'), ('dr','drupal'), ('es','eShop'),]
+    ('none', 'none'), ('wp', 'wordpress'), ('ss','sockshop'), ('dr','drupal'), ('es','eShop'), ('gitlab', 'gitlab'),]
 
 #pc.defineParameter( "Application To Start", "Select App", portal.ParameterType.STRING, applicationList[0],
 #                  applicationList, longDescription="Which app to auto start?")
