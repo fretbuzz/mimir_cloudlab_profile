@@ -42,5 +42,5 @@ bs.placement = "nonsysvol"
 # Print the RSpec to the enclosing page.
 pc.printRequestRSpec(request)
 
-node.addService(pg.Execute(shell="sh", command="bash /local/repository/kubernetes_setup.sh"))
-node.addService(pg.Execute(shell="sh", command="bash test_profile_script_running.sh"))
+node.addService(pg.Execute(shell="sh", command="/local/repository/kubernetes_setup.sh"))
+node.addService(pg.Execute(shell="sh", command="/local/repository/test_profile_script_running.sh"))
