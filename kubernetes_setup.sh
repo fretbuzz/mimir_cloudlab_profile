@@ -3,7 +3,7 @@ sudo chown -R jsev ./
 set +e
 if cd /mydata/mimir;
 then cd ..;
-else git clone https://github.com/fretbuzz/mimir;
+else git clone https://github.com/fretbuzz/mimir_snakemake_t2;
 fi
 
 echo "more stuff"
