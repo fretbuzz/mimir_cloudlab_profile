@@ -36,7 +36,7 @@ curl -Lo docker-machine-driver-kvm2 https://storage.googleapis.com/minikube/rele
 export MINIKUBE_HOME=/mydata
 
 #minikube start --vm-driver kvm2 --cpus=16 --memory=100000 --disk-size 65g
-minikube start --cpus=8 --memory=32000 --disk-size 65g
+minikube start --cpus=12 --memory=32000 --disk-size 65g
 
 echo "At end"
 EONG
