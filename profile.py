@@ -61,9 +61,9 @@ node.addService(pg.Execute(shell="bash", command="chmod +x /local/repository/tes
 node.addService(pg.Execute(shell="bash", command="/local/repository/test_profile_script_running.sh"))
 node.addService(pg.Execute(shell="bash", command="bash /local/repository/test_profile_script_running.sh"))
 
-node.addService(pg.Execute(shell="bash", command="chmod +x /local/repository/kubernetes_setup.sh"))
-node.addService(pg.Execute(shell="bash", command="/local/repository/kubernetes_setup.sh"))
-node.addService(pg.Execute(shell="bash", command="bash /local/repository/kubernetes_setup.sh"))
+#node.addService(pg.Execute(shell="bash", command="chmod +x /local/repository/kubernetes_setup.sh"))
+#node.addService(pg.Execute(shell="bash", command="/local/repository/kubernetes_setup.sh"))
+#node.addService(pg.Execute(shell="bash", command="bash /local/repository/kubernetes_setup.sh"))
 
 node.addService(pg.Execute(shell="bash", command="chmod +x /local/repository/deploy_application.sh"))
 node.addService(pg.Execute(shell="bash", command="/local/repository/deploy_application.sh " + str(params.App)))
