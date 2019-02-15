@@ -1,6 +1,6 @@
-kubernetes_setup.sh
+bash kubernetes_setup.sh
 
-deploy_application.sh $1
+bash deploy_application.sh $1
 
 : ' TODO
 EXP_NAME = None # TODO
