@@ -63,8 +63,11 @@ def is_pod_ready_p(pod_status):
     return False
 
 # note: we are assuming that it is the default namespace
-def get_svc_ip(name_of_svc):
-	out = subprocess.check_output(["kubectl", "get", "svc"])
+def get_svc_ip(name_of_svc, namespace=None):
+	if namespace == None:
+		out = subprocess.check_output(["kubectl", "get", "svc"])
+	else:
+		out = subprocess.check_output(["kubectl", "get", "svc", "--namespace=" + namespace])
 	parsed_out = parse_kubeclt_output(out, [1,3])
 	for out_vals in parsed_out:
 		if out_vals[0] == name_of_svc:
