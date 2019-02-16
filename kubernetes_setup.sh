@@ -1,7 +1,7 @@
 cd /mydata/
 sudo chown -R jsev ./
 set +e
-if cd /mydata/mimir;
+if cd /mydata/mimir_snakemake_t2;
 then cd ..;
 else git clone https://github.com/fretbuzz/mimir_snakemake_t2;
 fi
@@ -12,6 +12,10 @@ echo "test"
 sudo usermod -aG docker $USER
 echo "testtest"
 newgrp docker <<EONG
+
+export MINIKUBE_HOME=/mydata
+minikube stop
+minikube delete
 
 # Setup KVM2 driver
 echo "even more stuff"

@@ -4,9 +4,9 @@ declare -i goal_carts_instances=3
 
 kubectl scale deploy orders  queue-master shipping --replicas=3 --namespace="sock-shop"
 kubectl scale deploy catalogue front-end payment user --replicas=6 --namespace="sock-shop"
-sleep 420
+#sleep 20
 kubectl scale deploy carts --replicas=4 --namespace="sock-shop"
-sleep 360
+#sleep 360
 
 while [ $current_carts_instances -lt $goal_carts_instances ] 
 do
