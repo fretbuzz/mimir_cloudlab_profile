@@ -14,8 +14,8 @@ echo "testtest"
 newgrp docker <<EONG
 
 export MINIKUBE_HOME=/mydata
-minikube stop
-minikube delete
+#minikube stop
+#minikube delete
 
 # Setup KVM2 driver
 echo "even more stuff"
