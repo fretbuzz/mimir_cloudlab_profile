@@ -10,6 +10,8 @@ if [ "$1" = "wordpress" ]; then
   echo "it was testtest"
   echo "see, it was wordpress" >> /local/repository/deploy_test.txt
   # deploy_wordpress.py
+  bash /mydata/mimir_snakemake_t2/experiment_coordinator/install_scripts/install_selenium_dependencies.sh
+  python /mydata/mimir_snakemake_t2/experiment_coordinator/deployment_scripts/deploy_wordpress.py
 elif [ "$1" = "eShop" ]; then
   echo "see, it was eShop" >> /local/repository/deploy_test.txt
  # deploy_eshop.sh
