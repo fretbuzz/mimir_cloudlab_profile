@@ -55,11 +55,11 @@ bs = node.Blockstore("bs", "/mydata")
 bs.size = "80GB"
 bs.placement = "nonsysvol"
 
-node.addService(pg.Execute(shell="bash", command="touch /local/repository/test_test.xt"))
-node.addService(pg.Execute(shell="bash", command="bash /local/repository/test_profile_script_running.sh"))
-node.addService(pg.Execute(shell="bash", command="chmod +x /local/repository/test_profile_script_running.sh"))
-node.addService(pg.Execute(shell="bash", command="/local/repository/test_profile_script_running.sh"))
-node.addService(pg.Execute(shell="bash", command="bash /local/repository/test_profile_script_running.sh"))
+#node.addService(pg.Execute(shell="bash", command="touch /local/repository/test_test.xt"))
+#node.addService(pg.Execute(shell="bash", command="bash /local/repository/test_profile_script_running.sh"))
+#node.addService(pg.Execute(shell="bash", command="chmod +x /local/repository/test_profile_script_running.sh"))
+#node.addService(pg.Execute(shell="bash", command="/local/repository/test_profile_script_running.sh"))
+#node.addService(pg.Execute(shell="bash", command="bash /local/repository/test_profile_script_running.sh"))
 
 #node.addService(pg.Execute(shell="bash", command="chmod +x /local/repository/kubernetes_setup.sh"))
 #node.addService(pg.Execute(shell="bash", command="/local/repository/kubernetes_setup.sh"))
@@ -70,9 +70,9 @@ node.addService(pg.Execute(shell="bash", command="bash /local/repository/test_pr
 #node.addService(pg.Execute(shell="bash", command="bash /local/repository/deploy_application.sh " + str(params.App)))
 
 #run_experiment.sh
-node.addService(pg.Execute(shell="bash", command="chmod +x /local/repository/run_experiment.sh"))
-node.addService(pg.Execute(shell="bash", command="/local/repository/run_experiment.sh " + str(params.App)))
-node.addService(pg.Execute(shell="bash", command="bash /local/repository/run_experiment.sh " + str(params.App)))
+#node.addService(pg.Execute(shell="bash", command="chmod +x /local/repository/run_experiment.sh"))
+#node.addService(pg.Execute(shell="bash", command="/local/repository/run_experiment.sh " + str(params.App)))
+#node.addService(pg.Execute(shell="bash", command="bash /local/repository/run_experiment.sh " + str(params.App)))
 
 
 
