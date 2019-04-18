@@ -18,11 +18,11 @@ imageList = [
     ('urn:publicid:IDN+wisc.cloudlab.us+image+dna-PG0:minikube_starter:2', 'UBUNTU 16.04'),]
     
 # Define a single parameter for the instantiation page.
-#pc.defineParameter("osImage", "Select OS image",
-#                   portal.ParameterType.IMAGE,
-#                   imageList[0], imageList,
-#                   longDescription="Most clusters have this set of images, " +
-#                   "pick your favorite one.")
+pc.defineParameter("osImage", "Select OS image",
+                   portal.ParameterType.IMAGE,
+                   imageList[0], imageList,
+                   longDescription="Most clusters have this set of images, " +
+                   "pick your favorite one.")
 
 #applicationList = [
 #    ('none', 'none'), ('wordpress', 'wordpress'), ('sockshop','sockshop'), ('drupal','drupal'), ('eShop','eShop'), ('gitlab', 'gitlab'),]
@@ -40,7 +40,7 @@ params = pc.bindParameters()
 
 # Add a raw PC to the request and set the disk image.
 node = request.RawPC("node")
-node.disk_image = imageList[0] #params.osImage
+node.disk_image = params.osImage
 
 # added an ephemeral blockstore per documentation instructions
 bs = node.Blockstore("bs", "/mydata")
